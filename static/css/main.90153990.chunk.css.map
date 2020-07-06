@@ -1,0 +1,1 @@
+{"version":3,"sources":["Message.css"],"names":[],"mappings":"AAAA,iBACA,aAAc,CACZ,SAAU,CACV,eAAgB,CAChB,gBACF","file":"main.90153990.chunk.css","sourcesContent":[".Message{\r\ndisplay: block;\r\n  width: 30%;\r\n  max-width: 240px;\r\n  margin: 20px auto;\r\n}"]}
