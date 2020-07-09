@@ -5,10 +5,29 @@ import ScreenSpinner from "@vkontakte/vkui/dist/components/ScreenSpinner/ScreenS
 import "@vkontakte/vkui/dist/vkui.css";
 
 import Home from "./panels/Home";
-import Persik from "./panels/Persik";
+import Persik from "./panels/Test";
 import Result from "./panels/Result";
 const TResult = [];
-const questions = ["Вопрос 1", "Вопрос 2", "Вопрос 3"];
+const questions = [
+  "грамотная устная и письменная речь",
+  "эмоциональный интеллект",
+  "готовность работать в команде",
+  "принятие критики",
+  "способность сопереживать",
+  "деловая этика",
+  "толерантность",
+  "умение слушать",
+  "убеждение и аргументация",
+  "нетворкинг: построение и поддержание бизнес-отношений",
+  "ведение переговоров",
+  "проведение презентаций",
+  "базовые навыки продаж",
+  "самопрезентация",
+  "публичные выступления",
+  "нацеленность на результат",
+  "деловое письмо",
+  "клиентоориентированность",
+];
 const App = () => {
   const [activePanel, setActivePanel] = useState("home");
   const [fetchedUser, setUser] = useState(null);
