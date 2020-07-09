@@ -5,29 +5,13 @@ import PanelHeader from "@vkontakte/vkui/dist/components/PanelHeader/PanelHeader
 import Button from "@vkontakte/vkui/dist/components/Button/Button";
 import Group from "@vkontakte/vkui/dist/components/Group/Group";
 import Div from "@vkontakte/vkui/dist/components/Div/Div";
-import { Cell, Avatar } from "@vkontakte/vkui";
+import { Cell, Avatar, Header } from "@vkontakte/vkui";
 function Home({ id, go, fetchedUser }) {
-  console.log(fetchedUser);
   return (
     <Panel id={id}>
-      <PanelHeader>Example</PanelHeader>
+      <PanelHeader>Softskills</PanelHeader>
       {fetchedUser && (
-        <Group title="User Data Fetched with VK Bridge">
-          <Cell
-            before={
-              fetchedUser.photo_200 ? (
-                <Avatar src={fetchedUser.photo_200} />
-              ) : null
-            }
-            description={
-              fetchedUser.city && fetchedUser.city.title
-                ? fetchedUser.city.title
-                : ""
-            }
-          >
-            {`${fetchedUser.first_name} ${fetchedUser.last_name}`}
-          </Cell>
-        </Group>
+        <Header>Добро пожаловать,{`${fetchedUser.first_name}`}!</Header>
       )}
       <Group title="Navigation Example">
         <Div>
