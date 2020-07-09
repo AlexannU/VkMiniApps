@@ -13,6 +13,8 @@ import {
 import Icon28ChevronBack from "@vkontakte/icons/dist/28/chevron_back";
 import Icon24Back from "@vkontakte/icons/dist/24/back";
 
+import "./Radio.css";
+
 const osName = platform();
 function Persik(props) {
   let TestResult = [];
@@ -21,9 +23,8 @@ function Persik(props) {
     return (
       <Div key={index}>
         <Div>{el}</Div>
-
         <form>
-          <div>
+          <div className="form_radio_btn">
             <Radio
               name="radio"
               value="1"
@@ -31,6 +32,8 @@ function Persik(props) {
             >
               1
             </Radio>
+          </div>
+          <div className="form_radio_btn">
             <Radio
               name="radio"
               value="2"
@@ -38,6 +41,8 @@ function Persik(props) {
             >
               2
             </Radio>
+          </div>
+          <div className="form_radio_btn">
             <Radio
               name="radio"
               value="3"
@@ -45,16 +50,20 @@ function Persik(props) {
             >
               3
             </Radio>
+          </div>
+          <div className="form_radio_btn">
             <Radio
               name="radio"
-              value="3"
+              value="4"
               onChange={() => (TestResult[index] = 4)}
             >
               4
             </Radio>
+          </div>
+          <div className="form_radio_btn">
             <Radio
               name="radio"
-              value="3"
+              value="5"
               onChange={() => (TestResult[index] = 5)}
             >
               5
@@ -65,7 +74,7 @@ function Persik(props) {
     );
   });
   return (
-    <Panel id={props.id}>
+    <Panel id={props.id} style={{ textAlign: "center" }}>
       <PanelHeader
         left={
           <PanelHeaderButton onClick={() => props.go("home")}>
