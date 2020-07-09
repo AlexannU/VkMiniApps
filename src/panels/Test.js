@@ -24,44 +24,41 @@ function Persik(props) {
       <Div key={index}>
         <Div>{el}</Div>
         <form>
-          <div className="form_radio_btn">
+          <div>
             <Radio
+              className="form_radio_btn"
               name="radio"
               value="1"
               onChange={() => (TestResult[index] = 1)}
             >
               1
             </Radio>
-          </div>
-          <div className="form_radio_btn">
             <Radio
+              className="form_radio_btn"
               name="radio"
               value="2"
               onChange={() => (TestResult[index] = 2)}
             >
               2
             </Radio>
-          </div>
-          <div className="form_radio_btn">
             <Radio
+              className="form_radio_btn"
               name="radio"
-              value="3"
+              value="5"
               onChange={() => (TestResult[index] = 3)}
             >
               3
             </Radio>
-          </div>
-          <div className="form_radio_btn">
             <Radio
+              className="form_radio_btn"
               name="radio"
               value="4"
               onChange={() => (TestResult[index] = 4)}
             >
               4
             </Radio>
-          </div>
-          <div className="form_radio_btn">
             <Radio
+              className="form_radio_btn"
               name="radio"
               value="5"
               onChange={() => (TestResult[index] = 5)}
@@ -74,7 +71,7 @@ function Persik(props) {
     );
   });
   return (
-    <Panel id={props.id} style={{ textAlign: "center" }}>
+    <Panel id={props.id}>
       <PanelHeader
         left={
           <PanelHeaderButton onClick={() => props.go("home")}>
