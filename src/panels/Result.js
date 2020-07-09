@@ -8,12 +8,12 @@ function Result(props) {
     <Panel id={props.id}>
       <PanelHeader>Example</PanelHeader>
       <Div>
-        <Button size="xl" level="2" onClick={props.go} data-to="home">
+        <Button size="xl" level="2" onClick={() => props.go("home")}>
           Home
         </Button>
       </Div>
       <Div>Поздрввляю, ты завалил тест без вариантов ответа</Div>
-      <Div>Твой результат </Div>
+      <Div>Твой результат {props.res}</Div>
     </Panel>
   );
 }

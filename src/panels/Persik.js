@@ -4,7 +4,7 @@ import { platform, IOS } from "@vkontakte/vkui";
 import Panel from "@vkontakte/vkui/dist/components/Panel/Panel";
 import PanelHeader from "@vkontakte/vkui/dist/components/PanelHeader/PanelHeader";
 import PanelHeaderButton from "@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton";
-import { Radio, FormLayout, Div, Button } from "@vkontakte/vkui";
+import { Radio, Div, Button } from "@vkontakte/vkui";
 import Icon28ChevronBack from "@vkontakte/icons/dist/28/chevron_back";
 import Icon24Back from "@vkontakte/icons/dist/24/back";
 
@@ -15,6 +15,7 @@ const osName = platform();
 function Persik(props) {
   let TestResult = [];
   let questions = props.questions;
+  console.log(props);
   questions = questions.map((el, index) => {
     return (
       <Div key={index}>
@@ -65,7 +66,7 @@ function Persik(props) {
     <Panel id={props.id}>
       <PanelHeader
         left={
-          <PanelHeaderButton onClick={props.go} data-to="home">
+          <PanelHeaderButton onClick={() => props.go("home")}>
             {osName === IOS ? <Icon28ChevronBack /> : <Icon24Back />}
           </PanelHeaderButton>
         }
@@ -79,14 +80,13 @@ function Persik(props) {
         <Button
           size="xl"
           mode="commerce"
-          onMouseOver={(e) => {
+          onClick={(e) => {
             e.preventDefault();
-            console.log(TestResult);
+            props.res(TestResult);
+            props.go("result");
           }}
-          onClick={props.go}
-          data-to="result"
         >
-          Подвести итог
+          Отправить результат
         </Button>
       </Div>
     </Panel>
