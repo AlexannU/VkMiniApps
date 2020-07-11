@@ -16,7 +16,8 @@ import Icon24Back from "@vkontakte/icons/dist/24/back";
 import "./Radio.css";
 
 const osName = platform();
-function Persik(props) {
+
+function Test(props) {
   let TestResult = [];
   let questions = props.questions;
   questions = questions.map((el, index) => {
@@ -100,10 +101,10 @@ function Persik(props) {
   );
 }
 
-Persik.propTypes = {
+Test.propTypes = {
   id: PropTypes.string.isRequired,
   go: PropTypes.func.isRequired,
   questions: PropTypes.array.isRequired,
 };
 
-export default Persik;
+export default Test;

@@ -1,0 +1,4 @@
+{
+  "port": 5000,
+  "MongoDBUri": "mongodb+srv://AlexannU:oW4xziz1wvmkN21J@cluster0-163lo.mongodb.net/VkMiniApp"
+}
